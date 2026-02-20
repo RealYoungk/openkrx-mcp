@@ -45,8 +45,8 @@ def register_tools(mcp: FastMCP, client: OpenKrxClient):
         return format_response(data)
 
     @mcp.tool()
-    async def get_covered_warrant_daily(basDd: str) -> str:
-        """수익증권(커버드워런트) 일별매매정보를 조회합니다.
+    async def get_subscription_rights_daily(basDd: str) -> str:
+        """신주인수권증서 일별매매정보를 조회합니다.
 
         Args:
             basDd: 기준일자 (YYYYMMDD)
