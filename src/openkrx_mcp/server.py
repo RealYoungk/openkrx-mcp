@@ -48,7 +48,7 @@ def main():
     parser.add_argument(
         "--transport",
         default=os.environ.get("MCP_TRANSPORT", "stdio"),
-        choices=["stdio", "sse"],
+        choices=["stdio", "sse", "streamable-http"],
     )
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8000")))
