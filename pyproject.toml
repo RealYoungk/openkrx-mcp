@@ -1,0 +1,41 @@
+[project]
+name = "openkrx-mcp"
+version = "0.1.0"
+description = "KRX(한국거래소) Open API MCP Server - 주식, 채권, 파생상품, ETF/ETN/ELW, 지수, 일반상품, ESG 시세정보"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "RealYoungk", email = "youngjin5394@gmail.com" },
+]
+keywords = ["mcp", "krx", "openkrx", "korea", "stock", "exchange", "financial", "kospi", "kosdaq"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealYoungk/openkrx-mcp"
+Repository = "https://github.com/RealYoungk/openkrx-mcp"
+Issues = "https://github.com/RealYoungk/openkrx-mcp/issues"
+
+[project.scripts]
+openkrx-mcp = "openkrx_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openkrx_mcp"]
