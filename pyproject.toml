@@ -1,6 +1,6 @@
 [project]
 name = "openkrx-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "KRX(한국거래소) Open API MCP Server - 주식, 채권, 파생상품, ETF/ETN/ELW, 지수, 일반상품, ESG 시세정보"
 readme = "README.md"
 license = "MIT"
